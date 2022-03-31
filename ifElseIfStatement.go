@@ -1,27 +1,20 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
-func evaluateValue(value int64) string {
-	replyMessage := ""
-	//insert your code here
-
-	//Do not remove these lines
-	fmt.Println((replyMessage))
-	return replyMessage
+func activity3() {
+	var input int
+	fmt.Println("Input a number!")
+	fmt.Scanln(&input)
+	a := input%5 == 0
+	b := input%6 == 0
+	if a && b {
+		fmt.Println("This number is divisible by 5 and 6")
+	} else {
+		fmt.Println("This number is not divisible by 5 and 6")
+	}
 
 }
-
 func main() {
-	var compareValue string
-	fmt.Println("Enter an integer: ")
-	fmt.Scanln(&compareValue)
-
-	//conversion of value
-	valueInt, _ := strconv.ParseInt(compareValue, 10, 0)
-	evaluateValue(valueInt)
-
+	activity3()
 }
